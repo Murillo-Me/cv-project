@@ -1,0 +1,17 @@
+* {
+  --grey: #F2F2F2;
+  --beige: #EDE6DB;
+  --teal: #066163;
+  --black: #383838;
+}
+
+h1.header-title {
+  padding: 18px 40px;
+  color: var(--teal);
+  background-color: var(--grey);
+  width: fit-content;
+  border-radius: 40px;
+  box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.25);
+  font-weight: bolder;
+  margin: 35px;
+}

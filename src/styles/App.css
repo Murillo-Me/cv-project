@@ -1,0 +1,45 @@
+/* CSS RESET */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* APP CSS */
+
+* {
+  --grey: #F2F2F2;
+  --beige: #EDE6DB;
+  --teal: #066163;
+  --black: #383838;
+}
+
+body {
+  background-color: var(--black);
+}
+
+.App {
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

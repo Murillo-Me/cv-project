@@ -1,0 +1,79 @@
+* {
+  --grey: #F2F2F2;
+  --beige: #EDE6DB;
+  --teal: #066163;
+  --black: #383838;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 30px 50px;
+  background-color: var(--grey);
+  box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+section {
+  padding-block: 15px;
+}
+
+section.GeneralField {
+  display: flex;
+  flex-direction: row;
+}
+
+section.EducationField {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.section-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-input>div {
+  display: flex;
+  flex-direction: row;
+}
+
+main label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--teal);
+}
+
+main input {
+  margin-top: 5px;
+  margin-left: 10px;
+  background-color: var(--beige);
+  height: 1.4rem;
+  font-size: 1.2rem;
+}
+
+.BasicInput {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  margin-inline: 20px;
+  margin-block: 10px;
+  width: fit-content;
+}
+
+.small-input {
+  width: 20%;
+}
+
+.medium-input {
+  width: 50%;
+}
+
+.big-input {
+  width: 100%;
+}
