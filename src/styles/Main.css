@@ -18,24 +18,25 @@ main {
 }
 
 section {
-  padding-block: 15px;
-}
-
-section.GeneralField {
-  display: flex;
-  flex-direction: row;
-}
-
-section.EducationField {
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+  padding-block: 15px;
+  border-bottom: 3px dotted var(--black);
+}
+
+section h1 {
+  color: var(--teal);
+  font-weight: bolder;
+  text-align: center;
+  width: 15ch;
 }
 
 .section-input {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 .section-input>div {
@@ -53,8 +54,11 @@ main input {
   margin-top: 5px;
   margin-left: 10px;
   background-color: var(--beige);
-  height: 1.4rem;
-  font-size: 1.2rem;
+  height: 1.8rem;
+  font-size: 1rem;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
 }
 
 .BasicInput {
@@ -66,12 +70,18 @@ main input {
   width: fit-content;
 }
 
-.small-input {
+.extra-small-input {
   width: 20%;
+  margin-inline: 5px;
+}
+
+.small-input {
+  width: 30%;
+  margin-inline: 5px;
 }
 
 .medium-input {
-  width: 50%;
+  width: 70%;
 }
 
 .big-input {
