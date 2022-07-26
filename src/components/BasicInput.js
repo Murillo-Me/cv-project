@@ -1,12 +1,5 @@
-import { Component } from "react";
 
-class BasicInput extends Component {
-  constructor() {
-    super()
-  }
-
-  render() {
-    const { label, type, className } = this.props
+function BasicInput({label, type, className}) {
 
     return (
       <div className={"BasicInput " + className}>
@@ -14,8 +7,6 @@ class BasicInput extends Component {
         <input type={type} name="name-input" id="name-value"/>
       </div>
     )
-  }
-
 }
 
 export default BasicInput

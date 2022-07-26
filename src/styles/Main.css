@@ -10,14 +10,21 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: fit-content;
-  padding: 30px 50px;
+  width: 90vw;
+  min-width: 900px;
+  max-width: 1200px;
+  padding: 30px 30px;
   background-color: var(--grey);
   box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
 
+form {
+  width: 100%;
+}
+
 section {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -26,11 +33,33 @@ section {
   border-bottom: 3px dotted var(--black);
 }
 
+section .delete-field-btn {
+  visibility: hidden;
+}
+
+section:hover .delete-field-btn {
+  visibility: visible;
+}
+
 section h1 {
   color: var(--teal);
   font-weight: bolder;
   text-align: center;
   width: 15ch;
+}
+
+.delete-field-btn {
+  position: absolute;
+  margin-top: 5px;
+  top: 0;
+  right: 0;
+  background-color: lightcoral;
+  color: black;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+  padding: 3px 7px;
+  cursor: pointer;
 }
 
 .section-input {
@@ -86,4 +115,45 @@ main input {
 
 .big-input {
   width: 100%;
+}
+
+.add-field-btn-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.add-field-btn {
+  border: 2px solid black;
+  border-top: none;
+  background-color: var(--teal);
+  color: var(--grey);
+  font-weight: bold;
+  padding: 7px;
+  border-radius: 0px 0px 10px 10px;
+  margin-inline: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.add-field-btn:hover {
+  padding-top: 17px;
+  margin-bottom: 0px;
+  transition: all 0.2s ease;
+}
+
+#submit-btn {
+  margin-top: 20px;
+  background-color: var(--black);
+  color: var(--grey);
+  font-weight: bold;
+  padding-inline: 15px;
+  padding-block: 5px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
 }
