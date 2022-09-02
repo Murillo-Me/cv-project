@@ -90,6 +90,13 @@ main input {
   border-radius: 3px;
 }
 
+main input:disabled {
+  background-color: var(--grey);
+  color: black;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
 .BasicInput {
   display: flex;
   flex-direction: column;
@@ -151,9 +158,11 @@ main input {
   font-size: 1.2rem;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 #submit-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: 1px 1px black;
   transition: all 0.2s ease;
 }

@@ -1,0 +1,33 @@
+.footer-container {
+  margin-block: 20px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-info {
+  color: white;
+  margin-block: 5px;
+}
+
+.link-container {
+  background-color: white;
+  border-radius: 5px;
+  margin-block: 5px;
+  padding-inline: 10px;
+  padding-block: 5px;
+}
+
+.link-container:hover {
+  background-color: var(--grey);
+  transform: scale(1.05);
+  transition: ease all 0.2s;
+}
+
+a.footer-link {
+  text-decoration: none;
+  color: var(--teal);
+}
+

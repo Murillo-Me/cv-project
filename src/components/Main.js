@@ -13,17 +13,19 @@ function Main() {
   }
 
   const [formFields, setFormFields] = useState([])
+  const [isInputEnabled, setIsInputEnabled] = useState(true)
   
   function addField(e) {
     const componentName = e.target.getAttribute("data-field")
-    const FieldType = React.createElement(components[componentName],
-                                            {
-                                              key: formFields.length,
-                                              id: formFields.length,
-                                              handleDelete: deleteField,
-                                              show: true
-                                            }
-                                              , null)
+    // const FieldType = React.createElement(components[componentName],
+    //                                         {
+    //                                           key: formFields.length,
+    //                                           id: formFields.length,
+    //                                           handleDelete: deleteField,
+    //                                           show: true,
+    //                                           inputState: isInputEnabled,
+    //                                         }
+    //                                           , null)
     setFormFields(prevFormFields => prevFormFields.concat(FieldType))
   }
 
@@ -42,14 +44,16 @@ function Main() {
   return (
     <main className="Main">
       <form action="">
-        <GeneralField></GeneralField>
+        <GeneralField inputState={isInputEnabled}></GeneralField>
         {formFields.map(formField => formField.props.show && formField)}
       </form>
+      {isInputEnabled &&
       <div className="add-field-btn-container">
         <button data-field="EducationField" className="add-field-btn" onClick={addField}>Add Education</button>
         <button data-field="WorkField" className="add-field-btn" onClick={addField}>Add Work Experience</button>
       </div>
-      <button id="submit-btn">Submit</button>
+      }
+      <button id="submit-btn" onClick={()=>setIsInputEnabled(prevInputStatus=>!prevInputStatus)}>{isInputEnabled ? 'Finish' : 'Edit'}</button>
     </main>
   )
   }
