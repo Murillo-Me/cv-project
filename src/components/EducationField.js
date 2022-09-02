@@ -1,6 +1,9 @@
 import BasicInput from "./BasicInput";
+import { useContext } from 'react'
+import { UserContext } from './Main'
 
-function EducationField({handleDelete, id, inputState}) {
+function EducationField({handleDelete, id}) {
+  const isInputEnabled = useContext(UserContext)
 
   return (
     <section className="EducationField">
@@ -8,11 +11,11 @@ function EducationField({handleDelete, id, inputState}) {
       <h1 className="section-title">Education</h1>
       <div className="section-input">
         <div className="input-pt1">
-          <BasicInput label="Institution" type="text" className="big-input" inputState={inputState}></BasicInput>
+          <BasicInput label="Institution" type="text" className="big-input" isInputEnabled={isInputEnabled}></BasicInput>
         </div>
         <div className="input-pt2">
-          <BasicInput label="Title" type="text" className="medium-input" inputState={inputState}></BasicInput>
-          <BasicInput label="Year of Conclusion" type="number" className="small-input" inputState={inputState}></BasicInput>
+          <BasicInput label="Title" type="text" className="medium-input" isInputEnabled={isInputEnabled}></BasicInput>
+          <BasicInput label="Year of Conclusion" type="number" className="small-input" isInputEnabled={isInputEnabled}></BasicInput>
         </div>
       </div>
     </section>

@@ -1,10 +1,10 @@
 
-function BasicInput({label, type, className, inputState}) {
+function BasicInput({label, type, className, isInputEnabled}) {
 
     return (
       <div className={"BasicInput " + className}>
         <label htmlFor="name-input">{label}</label>
-        <input type={type} name="name-input" id="name-value" disabled={!inputState}/>
+        <input type={type} name="name-input" id="name-value" disabled={!isInputEnabled}/>
       </div>
     )
 }
